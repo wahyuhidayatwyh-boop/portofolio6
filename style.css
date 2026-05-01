@@ -3,14 +3,16 @@
     --bg-main: #0B1120;
     --bg-secondary: rgba(17, 24, 39, 0.85);
     --bg-card: rgba(30, 41, 59, 0.85);
-    --primary: #F59E0B; /* Industrial Amber */
+    --primary: #F59E0B;
+    /* Industrial Amber */
     --primary-hover: #D97706;
-    --secondary: #3B82F6; /* Tech Blue */
+    --secondary: #3B82F6;
+    /* Tech Blue */
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
     --border-color: rgba(255, 255, 255, 0.1);
     --grid-color: rgba(255, 255, 255, 0.03);
-    
+
     --font-heading: 'Rajdhani', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -39,7 +41,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: 
+    background-image:
         linear-gradient(rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.85)),
         url('image/bg.jpg');
     background-size: cover;
@@ -50,8 +52,11 @@ body {
 .background-grid::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
         linear-gradient(var(--grid-color) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -60,7 +65,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
 }
@@ -270,8 +280,15 @@ ul {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .title {
@@ -329,11 +346,15 @@ ul {
 }
 
 @keyframes spin {
-    100% { transform: rotate(360deg); }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes spin-reverse {
-    100% { transform: rotate(-360deg); }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 /* About Section */
@@ -380,15 +401,19 @@ ul {
 .img-placeholder::before {
     content: '';
     position: absolute;
-    top: 0; left: -100%;
-    width: 50%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
     transform: skewX(-20deg);
     animation: shine 3s infinite;
 }
 
 @keyframes shine {
-    100% { left: 200%; }
+    100% {
+        left: 200%;
+    }
 }
 
 .about-text {
@@ -737,23 +762,25 @@ footer p {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .hero-graphics {
         display: none;
     }
-    
+
     .cta-buttons {
         justify-content: center;
     }
-    
-    .about-content, .skills-container, .contact-container {
+
+    .about-content,
+    .skills-container,
+    .contact-container {
         flex-direction: column;
     }
-    
+
     .name {
         font-size: 4rem;
     }
-    
+
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -763,15 +790,15 @@ footer p {
     .section-padding {
         padding: 80px 5%;
     }
-    
+
     .navbar {
         padding: 15px 5%;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .nav-links {
         position: fixed;
         top: 70px;
@@ -784,51 +811,23 @@ footer p {
         justify-content: center;
         transition: 0.3s;
     }
-    
+
     .nav-links.active {
         left: 0;
     }
-    
+
     .input-group {
         flex-direction: column;
     }
-    
+
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .project-info {
-        padding: 12px;
+        grid-template-columns: 1fr;
     }
 
-    .project-info h3 {
-        font-size: 1rem;
-    }
-
-    .project-info .date {
-        font-size: 0.7rem;
-        margin-bottom: 8px;
-    }
-
-    .project-info p {
-        font-size: 0.75rem;
-        margin-bottom: 10px;
-    }
-
-    .tags {
-        gap: 5px;
-    }
-
-    .tags span {
-        font-size: 0.65rem;
-        padding: 3px 8px;
-    }
-    
     .name {
         font-size: 3rem;
     }
-    
+
     .title {
         font-size: 1.5rem;
     }
