@@ -794,7 +794,7 @@ footer p {
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 80px 5%;
+        padding: 60px 5%;
     }
 
     .navbar {
@@ -826,8 +826,69 @@ footer p {
         flex-direction: column;
     }
 
+    /* Grid kartu: 2 kolom di HP */
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .project-info {
+        padding: 12px;
+    }
+
+    .project-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .project-info .date {
+        font-size: 0.68rem;
+        margin-bottom: 6px;
+    }
+
+    .project-info p {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+    }
+
+    .tags span {
+        font-size: 0.62rem;
+        padding: 3px 7px;
+    }
+
+    /* Fix bagian Kontak */
+    .contact-container {
+        padding: 25px 20px;
+        gap: 25px;
+        overflow: hidden;
+    }
+
+    .contact-info h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-item {
+        font-size: 0.85rem;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .contact-item i {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .contact-item span {
+        width: calc(100% - 45px);
+        font-size: 0.82rem;
+        word-break: break-all;
     }
 
     .name {
