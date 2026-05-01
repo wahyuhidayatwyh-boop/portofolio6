@@ -826,10 +826,10 @@ footer p {
         flex-direction: column;
     }
 
-    /* Grid kartu: 2 kolom di HP */
+    /* Grid kartu: 1 kolom di HP */
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .project-info {
