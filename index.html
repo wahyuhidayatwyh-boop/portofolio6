@@ -302,13 +302,13 @@
                         <span>Bukittinggi, Indonesia</span>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" name="contact" method="POST" data-netlify="true">
                     <div class="input-group">
-                        <input type="text" placeholder="Nama Lengkap" required>
-                        <input type="email" placeholder="Email" required>
+                        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
-                    <input type="text" placeholder="Subjek" required>
-                    <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                    <input type="text" name="subjek" placeholder="Subjek" required>
+                    <textarea name="pesan" rows="5" placeholder="Pesan Anda" required></textarea>
                     <button type="submit" class="btn btn-primary">Kirim Pesan <i
                             class="fas fa-paper-plane"></i></button>
                 </form>

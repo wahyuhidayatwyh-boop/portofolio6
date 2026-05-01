@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger once on load
     revealOnScroll();
 
-    // Form Submit handling (Prevent default for demo)
+    // Form Submit handling (Netlify Compatible)
     const form = document.querySelector('.contact-form');
     if(form) {
         form.addEventListener('submit', (e) => {
@@ -108,8 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
             
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
             btn.style.opacity = '0.8';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
             
-            setTimeout(() => {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString() + "&form-name=contact"
+            })
+            .then(() => {
                 btn.innerHTML = '<i class="fas fa-check"></i> Pesan Terkirim';
                 btn.style.background = '#10B981';
                 btn.style.borderColor = '#10B981';
@@ -120,8 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.background = '';
                     btn.style.borderColor = '';
                     btn.style.opacity = '1';
+                    btn.disabled = false;
                 }, 3000);
-            }, 1500);
+            })
+            .catch(error => {
+                alert('Gagal mengirim pesan: ' + error);
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+            });
         });
     }
 });
